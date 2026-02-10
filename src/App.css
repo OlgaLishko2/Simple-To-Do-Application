@@ -1,0 +1,91 @@
+
+.AppContainer {
+  width: 350px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border: 1px solid #f0e4e6;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(230, 180, 190, 0.2);
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* header */
+.AppContainer h3 {
+  text-align: center;
+  color: #d17a8a;
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-size: 1.5rem;
+  letter-spacing: -0.5px;
+}
+
+/* Input and button */
+input[type="text"] {
+  width: calc(70% - 10px); /* Учитываем отступ */
+  padding: 12px;
+  border: 1.5px solid #f3e8ea;
+  border-radius: 12px;
+  background-color: #fdfbfc;
+  color: #5a4f51;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #eec0c8;
+}
+
+/* Add button */
+button.add {
+  width: 25%;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #eec0c8 0%, #d17a8a 100%);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button.add:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(209, 122, 138, 0.3);
+}
+/* Delete button */
+button.delete {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #fcf0f1;
+  color: #d17a8a;
+  font-size: 0.85em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button.delete:hover {
+  background-color: #f8d7da;
+  color: #a44a5a;
+}
+
+/* List of tasks */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 25px;
+}
+
+li {
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li span {
+  cursor: pointer;
+}
