@@ -1,3 +1,58 @@
+Simple-To-Do-Application
+
+
+This is a simple To-Do application built with **React** (frontend) and **Node.js + Express** (backend).  
+It allows users to add, view, complete, and delete tasks. Data is stored in-memory on the server.
+
+Features
+
+- Add new to-do items
+- Mark items as completed
+- Delete items
+- View all tasks
+
+
+Getting Started
+
+Clone the repository
+
+git clone https://github.com/OlgaLishko2/Simple-To-Do-Application
+cd Simple-To-Do-Application
+
+Start the backend
+cd backend
+npm install
+node server.js
+Server runs on http://localhost:4000
+
+API endpoints:
+Method	Endpoint	Description
+GET	/list	Get all tasks
+GET	/list/:id	Get a single task by ID
+POST	/list	Create a new task
+PUT	/list/:id	Update a task by ID
+DELETE	/list/:id	Delete a task by ID
+
+Start the frontend
+cd UI-React
+npm install
+npm start
+React app runs on http://localhost:3000
+
+Communicates with backend API to fetch and modify tasks
+
+Usage
+Open the app in the browser: http://localhost:3000
+Type a new task in the input and click Add
+Mark a task as completed or delete it using the buttons next to each task
+Tasks are stored in-memory on the server (they will reset when the server restarts)
+
+Notes
+express.json() middleware is used to parse JSON request bodies
+cors() middleware allows React (localhost:3000) to communicate with the API (localhost:4000)
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -69,56 +124,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-Simple-To-Do-Application
-
-
-This is a simple To-Do application built with **React** (frontend) and **Node.js + Express** (backend).  
-It allows users to add, view, complete, and delete tasks. Data is stored in-memory on the server.
-
-Features
-
-- Add new to-do items
-- Mark items as completed
-- Delete items
-- View all tasks
-
-
-Getting Started
-
-Clone the repository
-
-```bash
-git clone https://github.com/OlgaLishko2/Simple-To-Do-Application
-cd Simple-To-Do-Application
-
-Start the backend
-cd backend
-npm install
-node server.js
-Server runs on http://localhost:4000
-
-API endpoints:
-Method	Endpoint	Description
-GET	/list	Get all tasks
-GET	/list/:id	Get a single task by ID
-POST	/list	Create a new task
-PUT	/list/:id	Update a task by ID
-DELETE	/list/:id	Delete a task by ID
-
-Start the frontend
-cd UI-React
-npm install
-npm start
-React app runs on http://localhost:3000
-
-Communicates with backend API to fetch and modify tasks
-
-Usage
-Open the app in the browser: http://localhost:3000
-Type a new task in the input and click Add
-Mark a task as completed or delete it using the buttons next to each task
-Tasks are stored in-memory on the server (they will reset when the server restarts)
-
-Notes
-express.json() middleware is used to parse JSON request bodies
-cors() middleware allows React (localhost:3000) to communicate with the API (localhost:4000)
