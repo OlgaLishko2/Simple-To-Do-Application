@@ -16,40 +16,40 @@ Getting Started
 
 Clone the repository
 
-git clone https://github.com/OlgaLishko2/Simple-To-Do-Application
-cd Simple-To-Do-Application
+- git clone https://github.com/OlgaLishko2/Simple-To-Do-Application
+- cd Simple-To-Do-Application
 
 Start the backend
-cd backend
-npm install
-node server.js
-Server runs on http://localhost:4000
+- cd backend
+- npm install
+- node server.js
+- Server runs on http://localhost:4000
 
 API endpoints:
-Method	Endpoint	Description
-GET	/list	Get all tasks
-GET	/list/:id	Get a single task by ID
-POST	/list	Create a new task
-PUT	/list/:id	Update a task by ID
-DELETE	/list/:id	Delete a task by ID
+
+- GET	/list	Get all tasks
+- GET	/list/:id	Get a single task by ID
+ - POST	/list	Create a new task
+- PUT	/list/:id	Update a task by ID
+- DELETE	/list/:id	Delete a task by ID
 
 Start the frontend
-cd UI-React
-npm install
-npm start
-React app runs on http://localhost:3000
+- cd UI-React
+- npm install
+- npm start
+- React app runs on http://localhost:3000
 
 Communicates with backend API to fetch and modify tasks
 
 Usage
-Open the app in the browser: http://localhost:3000
-Type a new task in the input and click Add
-Mark a task as completed or delete it using the buttons next to each task
-Tasks are stored in-memory on the server (they will reset when the server restarts)
+- Open the app in the browser: http://localhost:3000
+- Type a new task in the input and click Add
+- Mark a task as completed or delete it using the buttons next to each task
+- Tasks are stored in-memory on the server (they will reset when the server restarts)
 
 Notes
-express.json() middleware is used to parse JSON request bodies
-cors() middleware allows React (localhost:3000) to communicate with the API (localhost:4000)
+- express.json() middleware is used to parse JSON request bodies
+- cors() middleware allows React (localhost:3000) to communicate with the API (localhost:4000)
 
 
 
