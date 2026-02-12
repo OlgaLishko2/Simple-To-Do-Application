@@ -8,9 +8,9 @@ postRouter.post('/', (req, res) => {
   const newTask = createElement(req.body);
   if (newTask) {
     list.push(newTask);
-    res.status(201).send(newTask);
+    res.status(201).json(list);
   } else {
-    res.status(400).send({ error: 'Task text required' });
+    res.status(400).json({ error: 'Task text required' });
   }
 });
 

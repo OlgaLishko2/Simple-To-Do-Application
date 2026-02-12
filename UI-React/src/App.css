@@ -22,7 +22,7 @@
 
 /* Input and button */
 input[type="text"] {
-  width: calc(70% - 10px); /* Учитываем отступ */
+  width: calc(70% - 10px); 
   padding: 12px;
   border: 1.5px solid #f3e8ea;
   border-radius: 12px;

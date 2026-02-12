@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ToDoItem from '../ToDoItem/ToDoItem';
 
 
@@ -6,13 +6,12 @@ const ToDoList = ({ tasks, deleteTask, toggleComplete }) => {
   return (
     <ul>
       {tasks.length === 0 ? (
-        <p>No tasks available!</p>
+        <p style={{color: 'red'}}>🗓Your list is empty!</p>
       ) : (
-        tasks.map((task, index) => (
+        tasks.map((task) => (
           <ToDoItem 
-            key={index} 
+            key={task.id} 
             task={task} 
-            index={index} 
             deleteTask={deleteTask} 
             toggleComplete={toggleComplete} 
           />

@@ -2,14 +2,18 @@ import React, { useState } from 'react';
 
 const AddToDo = ({addList}) =>{
   const [text, setText] = useState(""); 
+const [error, setError] = useState("");
 
-  const handleAdd = ()=>{
+const handleAdd = () => {
+    if (text.trim() === "") {
+      setError("🪄Please enter a task!🪄");
+      return;
+    }
 
-        if (text !== "") {
-            addList(text); // send text
-            setText(""); //clean the field
-        }
- } ;
+    addList(text);
+    setText("");
+    setError("");
+  };
 
   return (
     <div>
@@ -21,6 +25,7 @@ const AddToDo = ({addList}) =>{
       onChange={(e) => setText(e.target.value)}/>
 
       <button onClick={handleAdd} className="add">Add</button>
+      {error && <p style={{color: 'green'}}>{error}</p>}
     </div>
   );
 }
