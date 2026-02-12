@@ -69,34 +69,23 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-# Simple-To-Do-Application
+Simple-To-Do-Application
+
+
 This is a simple To-Do application built with **React** (frontend) and **Node.js + Express** (backend).  
 It allows users to add, view, complete, and delete tasks. Data is stored in-memory on the server.
 
-## Features
+Features
 
 - Add new to-do items
 - Mark items as completed
 - Delete items
 - View all tasks
 
-## Project Structure
 
-Simple-To-Do-Application/
-├─ backend/ # Node.js + Express API
-│ ├─ routes/ # API routes (GET, POST, PUT, DELETE)
-│ ├─ utils.js # Helper functions for CRUD operations
-│ └─ server.js # Express server entry point
-├─ UI-React/ # React app
-│ ├─ src/
-│ │ ├─ components/ # React components (AddToDo, ToDoList, ToDoItem)
-│ │ └─ App.js
-│ └─ package.json
-└─ README.md
+Getting Started
 
-## Getting Started
-
-### 1. Clone the repository
+Clone the repository
 
 ```bash
 git clone https://github.com/OlgaLishko2/Simple-To-Do-Application
