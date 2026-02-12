@@ -32,10 +32,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "scripts": {
-  "start": "react-scripts start",
-  "build": "CI=false react-scripts build"
-}
+  }
 
 }
