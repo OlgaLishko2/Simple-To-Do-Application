@@ -12,8 +12,7 @@ const PORT = 4000;
 app.use(cors());           // allow React to talk to server
 app.use(express.json());  // parse JSON
 
-let list = [];
-let nextId = 1;
+
 
 
 app.use('/list', getRouter);

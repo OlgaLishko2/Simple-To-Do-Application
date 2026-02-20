@@ -1,5 +1,5 @@
 const express = require('express');
-const { getElementById, seedElements } = require('../utils');
+const db = require('../database');
 
 let list = [];
 // seedElements(list, 'task');
@@ -8,14 +8,20 @@ const getRouter = express.Router();
 
 // GET all tasks
 getRouter.get('/', (req, res) => {
-  res.send(list);
+  db.all('SELECT * FROM tasks', [], (err, rows) => {
+    if (err) return res.status(500).json({ error: err.message });
+    res.json(rows);
+   });
 });
 
 // GET 1 task by id
 getRouter.get('/:id', (req, res) => {
-  const task = getElementById(req.params.id, list);
-  if (task) res.send(task);
-  else res.status(404).send();
+  const id = req.params.id;
+db.get('SELECT * FROM tasks WHERE id = ?', [id], (err, row) => {
+    if (err) return res.status(500).json({ error: err.message });
+    if (!row) return res.status(404).json({ error: 'Task not found' });
+    res.json(row);
+  });
 });
 
 module.exports = { getRouter, list }; 
